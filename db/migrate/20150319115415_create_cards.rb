@@ -4,9 +4,9 @@ class CreateCards < ActiveRecord::Migration
       t.belongs_to :deck
       t.string :question
       t.string :answer
-      t.string :dummy_answer_1
-      t.string :dummy_answer_2
-      t.string :dummy_answer_3
+      t.string :dummy_answer1
+      t.string :dummy_answer2
+      t.string :dummy_answer3
 
       t.timestamps
     end
