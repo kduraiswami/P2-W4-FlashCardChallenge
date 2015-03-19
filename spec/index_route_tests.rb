@@ -48,7 +48,7 @@ end
   context "user enters correct answer" do
 
     it "should should move to next question with the correct answer" do
-      post '/current/'
+      post '/play/'
       expect(last_response.status).to be(200)
     end
 
@@ -57,7 +57,7 @@ end
   context "user enters invalid answer" do
 
     it "should reroute user to the same question with an invalid answer" do
-      post '/current/'
+      post '/play/'
       expect(last_response.status).to be(301)
     end
 
