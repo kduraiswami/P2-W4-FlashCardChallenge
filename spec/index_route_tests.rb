@@ -5,22 +5,22 @@ describe "index page" do
   describe "get / index page" do
 
   it "should return a valid response" do
-    get '/'
+    get '/play'
     expect(last_response.status).to be(200)
   end
 
   it "should render a form to submit answer" do
-    get '/'
+    get '/play'
     expect(last_response.body).to include('<input type="submit"')
   end
 
   it "should render a question" do
-    get '/'
+    get '/play'
     expect(last_response.body).to include('?')
   end
 
   it "should render a selection of answers" do
-    get '/'
+    get '/play'
     expect(last_response.body).to include('<input type="radio"')
   end
 
