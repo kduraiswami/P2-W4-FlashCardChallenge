@@ -1,4 +1,4 @@
-proto=User.create(name:"prototypo", pw:"allyourbases")
+proto=User.create(username:"prototypo", pw:"allyourbases")
 
 cards1=[
 {question:"What are the house of Greyjoy words?",answer:"We do not sow", dummy_answer1:"Theons a douche", dummy_answer2:"Dead men tell no tales", dummy_answer3:"What is dead may never die"},
@@ -15,17 +15,17 @@ cards1=[
 ]
 
 cards2=[
-{question:"What was the governors first name?",answer:"David", dummy_answer1:"Carl", dummy_answer2:"Billy", dummy_answer3:"Shane"}
-{question:"Where does the series start?",answer:"Atlanta", dummy_answer1:"New York", dummy_answer2:"Texas", dummy_answer3:"Los Angeles"}
-{question:"What happened to the CDC at the end of season one?",answer:"It got blown up", dummy_answer1:"It found a cure", dummy_answer2:"It was overran with walkers", dummy_answer3:"It was burned to the ground"}
-{question:"Who was Dales brother?",answer:"Merle", dummy_answer1:"Chip", dummy_answer2:"Matt", dummy_answer3:"Glen"}
-{question:"Who was Morgans son?",answer:"Dwayne", dummy_answer1:"Johnson", dummy_answer2:"Carl", dummy_answer3:"Sofia"}
-{question:"What did Terminus end up being?",answer:"A cannibal shop", dummy_answer1:"The last stop in the road", dummy_answer2:"A cafe", dummy_answer3:"A train station"}
-{question:"What was Ricks job before the apocolypse?",answer:"Sherrifs Deputy", dummy_answer1:"Souix Chef", dummy_answer2:"Baby sitter", dummy_answer3:"Cheerleader"}
-{question:"What was the Governors settlement called?",answer:"Woodbury", dummy_answer1:"San Francisco", dummy_answer2:"Dev Bootcamp", dummy_answer3:"Woodstock"}
-{question:"What is the name of the town they landed in after Terminus?",answer:"Alexandria", dummy_answer1:"Morgania", dummy_answer2:"DC", dummy_answer3:"Capitol Hill"}
-{question:"What is Daryls weapon?",answer:"Crossbow", dummy_answer1:"His words", dummy_answer2:"Katana", dummy_answer3:"44 Magnum"}
-{question:"Who were Micciones pets?",answer:"Her boyfriend and his friend", dummy_answer1:"Two random people", dummy_answer2:"Her old boss and his brother", dummy_answer3:"Her cousins"}
+{question:"What was the governors first name?",answer:"David", dummy_answer1:"Carl", dummy_answer2:"Billy", dummy_answer3:"Shane"},
+{question:"Where does the series start?",answer:"Atlanta", dummy_answer1:"New York", dummy_answer2:"Texas", dummy_answer3:"Los Angeles"},
+{question:"What happened to the CDC at the end of season one?",answer:"It got blown up", dummy_answer1:"It found a cure", dummy_answer2:"It was overran with walkers", dummy_answer3:"It was burned to the ground"},
+{question:"Who was Dales brother?",answer:"Merle", dummy_answer1:"Chip", dummy_answer2:"Matt", dummy_answer3:"Glen"},
+{question:"Who was Morgans son?",answer:"Dwayne", dummy_answer1:"Johnson", dummy_answer2:"Carl", dummy_answer3:"Sofia"},
+{question:"What did Terminus end up being?",answer:"A cannibal shop", dummy_answer1:"The last stop in the road", dummy_answer2:"A cafe", dummy_answer3:"A train station"},
+{question:"What was Ricks job before the apocolypse?",answer:"Sherrifs Deputy", dummy_answer1:"Souix Chef", dummy_answer2:"Baby sitter", dummy_answer3:"Cheerleader"},
+{question:"What was the Governors settlement called?",answer:"Woodbury", dummy_answer1:"San Francisco", dummy_answer2:"Dev Bootcamp", dummy_answer3:"Woodstock"},
+{question:"What is the name of the town they landed in after Terminus?",answer:"Alexandria", dummy_answer1:"Morgania", dummy_answer2:"DC", dummy_answer3:"Capitol Hill"},
+{question:"What is Daryls weapon?",answer:"Crossbow", dummy_answer1:"His words", dummy_answer2:"Katana", dummy_answer3:"44 Magnum"},
+{question:"Who were Micciones pets?",answer:"Her boyfriend and his friend", dummy_answer1:"Two random people", dummy_answer2:"Her old boss and his brother", dummy_answer3:"Her cousins"},
 {question:"What was the name of the Governors daughter?",answer:"Penny", dummy_answer1:"Sofia", dummy_answer2:"Janet", dummy_answer3:"Jill"}
 ]
 
