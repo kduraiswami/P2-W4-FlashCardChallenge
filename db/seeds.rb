@@ -1,4 +1,4 @@
-proto=User.create(username:"prototypo", pw:"allyourbases")
+proto=User.create(username:"prototypo", password:"allyourbases")
 
 cards1=[
 {question:"What are the house of Greyjoy words?",answer:"We do not sow", dummy_answer_1:"Theons a douche", dummy_answer_2:"Dead men tell no tales", dummy_answer_3:"What is dead may never die"},
