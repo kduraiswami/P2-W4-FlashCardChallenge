@@ -1,16 +1,55 @@
 #score{
   position: absolute;
-  background-color: yellow;
+  background-color: white;
+  color: steelblue;
+  border-radius: 30px;
   left: 20%;
   top: 20%;
   padding: 5%;
 }
+
 body {
-background-color: white;
-margin-right: 20%;
+  color: whitesmoke;
+  background-image: url(/images/GoThrones.jpg);
+  background-size: auto;
+  margin-left: 5%;
 }
 
+.current_score {
+	color: orange;
+}
+
+.question {
+    color: greenyellow;
+}
+
+.button {
+    background-color: white;
+    color: red;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: .75em;
+    color: darkolivegreen;
+    width: 150px;
+    font-weight: bold;
+}
+
+/*Card class for the game */
+.card {
+    border: 1px solid grey;
+
+    padding: 25px 25px 25px 50px;
+    border-radius: 50px;
+    box-shadow: 9px 7px 58px grey;
+    /* background-color: white; */
+    width: 65%;
+    max-width: 700px;
+    min-width: 250px;
+    position: relat;
+}
 
 .feedback {
-  color: bloodorange;
+	/* border: 2px solid blue; */
+	color: yellow;
+	width: 90%;
 }
