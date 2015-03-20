@@ -4,7 +4,7 @@
 <br>
 <form action="/submit" method="POST">
 
-<input type="hidden" name="current_id" value="<%=@id%>">
+<input type="hidden" name="current_id" value="<%=@id.to_i%>">
 <%@answer_options.each do |current_option|%>
 
 <input type="radio" name="answer" value ="<%=current_option%>">
@@ -14,6 +14,7 @@
 <%end%>
 
 <br>
+
 <br>
 <input type="submit" value="Submit">
 </form>
