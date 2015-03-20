@@ -1,15 +1,11 @@
 get '/' do
-erb :game
+erb :index
 end
 
 get '/play/:id' do
-  # session['id']
-  puts @id = params[:id]
+  # session['id']`
   # session['current_score']=0
-    # @question=Deck.where(name:"Game of thrones").first.cards.first
     @question=Deck.where(name:"Game of thrones").first.cards[params[:id].to_i]
-    # @question=Deck.where(name:"Game of thrones").first.
-    # cards[params[:id]]
     @deck=Deck.where(name:"Game of thrones").first
   erb :game
 end
@@ -24,5 +20,6 @@ post '/submit' do
     @id+=1
   end
 
+  # redirect '/'
   redirect '/play/@id'
 end
