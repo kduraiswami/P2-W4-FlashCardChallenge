@@ -13,14 +13,14 @@ get '/play/:id' do
 end
 
 post '/submit' do
-  # @id=params[:current_id]
-  # if @answer == params[:answer]
-  #   @id+=1
-  #   session['current_score']+=1
-  # else
-  #   @id+=1
-  # end
+  @id=params[:current_id]
+  if @answer == params[:answer]
+    @id+=1
+    session['current_score']+=1
+  else
+    @id+=1
+  end
 
-  redirect '/'
-  # redirect '/play/@id'
+  # redirect '/'
+  redirect '/play/@id'
 end
