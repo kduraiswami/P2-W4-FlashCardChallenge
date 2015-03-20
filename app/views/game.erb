@@ -5,17 +5,14 @@
 <form action="/submit" method="POST">
 
 <input type="hidden" name="current_id" value="<%=@id%>">
+<%@answer_options.each do |current_option|%>
 
-<input type="radio" name="answer" value ="<%=@question.dummy_answer_1%>">
-<%=@question.dummy_answer_1%>
+<input type="radio" name="answer" value ="<%=current_option%>">
+<%=current_option%>
 <br>
 
-<input type="radio" name="answer" value ="<%=@question.dummy_answer_2%>">
-<%=@question.dummy_answer_2%>
-<br>
+<%end%>
 
-<input type="radio" name="answer" value ="<%=@question.dummy_answer_3%>">
-<%=@question.dummy_answer_3%>
 <br>
 <br>
 <input type="submit" value="Submit">
