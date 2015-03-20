@@ -2,6 +2,7 @@ get '/' do
 erb :index
 end
 
+
 get '/play/:id' do
   # session['id']
   p @id=params[:id].to_i
