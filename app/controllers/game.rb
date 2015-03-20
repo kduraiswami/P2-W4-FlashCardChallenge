@@ -16,14 +16,11 @@ post '/submit' do
   p @id=params[:current_id].to_i
   p @answer=Deck.where(name:"Game of thrones").first.cards[@id].answer
   p params[:answer]
- # p "-------------------------------" * 80
   if @answer == params[:answer]
     @id+=1
   #   session['current_score']+=1
-  else
-    @id+=1
-  end
+  @id=params[:current_id]
 
-  # redirect '/'
   redirect "/play/#{@id}"
+  # redirect '/play/@id'
 end
