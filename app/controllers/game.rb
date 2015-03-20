@@ -21,15 +21,13 @@ post '/submit' do
   @answer=Deck.where(name:"Game of thrones").first.cards[@id].answer
   params[:answer]
 
-
-
   if @answer == params[:answer]
     @id+=1
     session['current_score']+=1
-    session['feedback'] = "You choose correctly."
+    session['feedback'] = "You choose wisely. Proceed."
   else
     @id+=1
-    session['feedback'] = "You fucked up that last question, the answer was: #{@answer}"
+    session['feedback'] = "You fu@%#! up that last question! The correct answer was: #{@answer}"
   end
 
 if @id >= Deck.where(name:"Game of thrones").first.cards.count
