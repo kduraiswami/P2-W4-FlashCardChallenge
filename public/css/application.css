@@ -1,0 +1,10 @@
+/*body {
+background-color:
+}*/
+#score{
+  position: absolute;
+  background-color: yellow;
+  left: 20%;
+  top: 20%;
+  padding: 5%;
+}
