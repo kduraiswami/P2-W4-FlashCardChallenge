@@ -1,9 +1,9 @@
 <div id="score">
 
 <h1>Your score</h1>
-<h2>Thank you for playing the <%=Deck.where(id:@game.deck_id).first.name%> deck.</h2>
+<h2>Thank you for playing the  deck.</h2>
 <br>
-You scored a <%=@game.score%> out of <%=Deck.where(id:@game.deck_id).first.cards.count%>
+You scored a <%=session['current_score']%> out of
 
 <br>
 <a href="/">PLay again?</a>
