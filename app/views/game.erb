@@ -1,11 +1,14 @@
 <h1> <%=@deck.name%> </h1>
-<div id="feedback">
-<h3><%=session['feedback']%></h3>
+
+<div class="feedback">
+	<h3 id="feedback"></h3>
 </div>
 
+<p>
 <%=@question.question%>
-<br>
-<br>
+</p>
+
+<p>
 <form action="/submit" method="POST">
 
 <input type="hidden" name="current_id" value="<%=@id.to_i%>">
@@ -13,13 +16,13 @@
 
 <input type="radio" name="answer" value ="<%=current_option%>">
 <%=current_option%>
-<br>
+</p>
 
 <%end%>
 
-<br>
+<p>
 <%=session['current_score']%>
-<br>
+<p>
 <input type="submit" value="Submit">
 </form>
 
