@@ -1,5 +1,8 @@
-<div id="score">
+<div class=congrats>
+  <h1>Your final score is: [SCORE HERE]</h1>
+</div><br>
 
+<<<<<<< HEAD
 <h1>Your score:</h1>
 <h2>Thank you for playing the  deck.</h2>
 <br>
@@ -9,5 +12,29 @@ You scored a <%=session['current_score']%> out of <%=Deck.where(name:"Game of th
 
 
 <a href="/">Play again?</a>
-
+=======
+<div class=congrats>
+  <h1>You've achieved a level of: [level HERE]</h1>
 </div>
+<br><br>
+
+<div class = "leaderboard">
+  <h1>Leaderboard</h1>
+
+  <br>
+  You scored a <%=session['current_score']%> out of
+</div>
+
+<br><br>
+>>>>>>> 9aeca1517114433352cb1016517e030e8cafdcee
+
+<div class= "button" class="replay">
+  <a href="/">Play again?</a>
+</div>
+<br><br>
+
+<div class= "button" class="replay">
+ <a href="/">New Player?</a>
+</div>
+
+

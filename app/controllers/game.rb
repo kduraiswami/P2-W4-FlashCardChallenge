@@ -7,7 +7,7 @@ get '/play/:id' do
   end
   # p '-'*800
   @question=Deck.where(name:"Game of thrones").first.cards[@id]
-  @id
+  # @id
   # p '-'*800
     @answer_options=[@question.answer, @question.dummy_answer_1, @question.dummy_answer_2, @question.dummy_answer_3].shuffle!
     @deck=Deck.where(name:"Game of thrones").first
