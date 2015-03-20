@@ -1,28 +1,37 @@
 <div class=congrats>
-  <h1>Your final score is: [SCORE HERE]</h1>
+  <h1>Your final score is: <%=session['current_score']%></h1>
 </div><br>
 
-<div class=congrats>
-  <h1>You've achieved a level of: [level HERE]</h1>
-</div>
-<br><br>
 
 <div class = "leaderboard">
   <h1>Leaderboard</h1>
 
-  <br>
-  You scored a <%=session['current_score']%> out of
-</div>
+<div class="results">
+  <table class="table">
+    <div class="columns">
+      <tr> <td>Player</td><br><td>Score </td><td></td><td>Your Level</td> </tr>
+      <tr></tr>
+    </div>
+    <%  @leaders.each do |player|  %>
+  <tr> <td><%=player.username%> </td><br><td><%=player.score%> </td><td></td><td><%=player.level%></td> </tr>
+    <%end %>
+  </table>
 
 <br><br>
-
+<br><br>
 <div class= "button" class="replay">
-  <a href="/">Play again?</a>
+  <a href="/play/0">Play again?</a>
 </div>
+<br><br>
 <br><br>
 
 <div class= "button" class="replay">
  <a href="/">New Player?</a>
 </div>
+
+</div>
+
+<br><br>
+
 
 
