@@ -3,7 +3,7 @@ erb :index
 end
 
 get '/play/:id' do
-  # session['id']`
+  # session['id']
   # session['current_score']=0
   @id=params[:id]
     @question=Deck.where(name:"Game of thrones").first.cards[params[:id].to_i]
@@ -11,7 +11,6 @@ get '/play/:id' do
     @deck=Deck.where(name:"Game of thrones").first
   erb :game
 end
-
 
 post '/submit' do
   @id=params[:current_id]
