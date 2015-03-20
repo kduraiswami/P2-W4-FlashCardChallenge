@@ -1,14 +1,10 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe "Card Model" do
 
-  it "should make sure there are the same number of questions and answers" do
-    expect(Card.question.count).to eq(Card.answer.count)
-  end
-
-  it "should make sure a new question has four possible answers" do
+  it "validation should make sure a new question has four possible answers" do
     expect{
-      Card.create(question: "Hi how are you", answer: "great")
+      Card.create(question: "(0...8).map { (65 + rand(26)).chr }.join", answer: "(0...8).map { (65 + rand(26)).chr }.join")
     }.to change{Card.count}.by(0)
   end
 
