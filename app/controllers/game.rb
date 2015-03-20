@@ -15,17 +15,22 @@ get '/play/:id' do
 end
 
 post '/submit' do
-  p @id=params[:current_id].to_i
-  p @answer=Deck.where(name:"Game of thrones").first.cards[@id].answer
-  p params[:answer]
+  @id=params[:current_id].to_i
+  @answer=Deck.where(name:"Game of thrones").first.cards[@id].answer
+  params[:answer]
+
+if @id >= Deck.where(name:"Game of thrones").first.cards.count
+  redirect '/score'
+end
+
 
   if @answer == params[:answer]
     @id+=1
     session['current_score']+=1
-    @feedback = "You choose correctly."
+    session['feedback'] = "You choose correctly."
   else
     @id+=1
-    @feedback = "You fucked up that last question, the answer was: #{@answer}"
+    session['feedback'] = "You fucked up that last question, the answer was: #{@answer}"
   end
 
   # redirect '/'
