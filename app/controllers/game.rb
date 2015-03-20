@@ -5,7 +5,9 @@ end
 get '/play/:id' do
   # session['id']`
   # session['current_score']=0
+  @id=params[:id]
     @question=Deck.where(name:"Game of thrones").first.cards[params[:id].to_i]
+    @answer_options=[@question.answer, @question.dummy_answer1, @question.dummy_answer2, @question.dummy_answer3].shuffle!
     @deck=Deck.where(name:"Game of thrones").first
   erb :game
 end
