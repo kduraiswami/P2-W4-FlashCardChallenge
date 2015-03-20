@@ -7,5 +7,7 @@ get '/score' do
   erb :final
 end
 
+
+
 #<%=Deck.where(id:@game.deck_id).first.name%>
 #<%=Deck.where(id:@game.deck_id).first.cards.count%>

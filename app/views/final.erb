@@ -3,9 +3,11 @@
 <h1>Your score:</h1>
 <h2>Thank you for playing the  deck.</h2>
 <br>
-You scored a <%=session['current_score']%> out of
+You scored a <%=session['current_score']%> out of <%=Deck.where(name:"Game of thrones").first.cards.count%>
 
 <br>
+
+
 <a href="/">Play again?</a>
 
 </div>
