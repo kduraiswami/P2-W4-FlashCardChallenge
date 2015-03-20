@@ -1,3 +1,16 @@
+.leaderboard {
+    border: 1px solid grey;
+    padding: 25px 25px 25px 50px;
+    border-radius: 50px;
+    box-shadow: 9px 7px 58px grey;
+    /* background-color: white; */
+    width: 65%;
+    max-width: 700px;
+    min-width: 250px;
+    position: relat;
+}
+
+
 #score{
   position: absolute;
   background-color: white;
