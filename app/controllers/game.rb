@@ -1,5 +1,5 @@
 get '/' do
-erb :game
+erb :index
 end
 
 get '/play/:id' do
@@ -20,5 +20,6 @@ post '/submit' do
     @id+=1
   end
 
+  # redirect '/'
   redirect '/play/@id'
 end
