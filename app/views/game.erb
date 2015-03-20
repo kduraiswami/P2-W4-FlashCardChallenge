@@ -1,2 +1,16 @@
-<%=@deck.name%>
-<form
+<h1> <%=@deck.name%> </h1>
+<%=@question.question%><br>
+
+<form action="/submit" method="POST">
+
+<input type="radio" name="answer" value =<%=@question.dummy_answer_1%>>
+<%=@question.dummy_answer_1%><br>
+
+<input type="radio" name="answer" value =<%=@question.dummy_answer_2%>>
+<%=@question.dummy_answer_2%><br>
+
+<input type="radio" name="answer" value =<%=@question.dummy_answer_3%>>
+<%=@question.dummy_answer_3%><br>
+
+</form>
+
