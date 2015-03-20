@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.0'
+ruby '2.1.4'
 
 # PostgreSQL driver
 gem 'pg'
@@ -24,6 +24,12 @@ group :test do
 end
 
 group :test, :development do
+  gem 'sqlite3'
   gem 'factory_girl'
   gem 'faker'
+end
+
+group :production do
+  # gem 'pg'
+  gem 'rails_12factor'
 end
