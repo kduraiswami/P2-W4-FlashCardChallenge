@@ -1,0 +1,20 @@
+<h1> <%=@deck.name%> </h1>
+<%=@question.question%>
+<br>
+<br>
+<form action="/submit" method="POST">
+
+<input type="hidden" name="current_id" value="<%=@id%>">
+<%@answer_options.each do |current_option|%>
+
+<input type="radio" name="answer" value ="<%=current_option%>">
+<%=current_option%>
+<br>
+
+<%end%>
+
+<br>
+<br>
+<input type="submit" value="Submit">
+</form>
+
