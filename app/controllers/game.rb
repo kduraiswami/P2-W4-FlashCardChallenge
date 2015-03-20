@@ -4,9 +4,11 @@ end
 
 get '/play/:id' do
   # session['id']
-  # session['current_score']=0
-  # p '-'*800
   p @id=params[:id].to_i
+  if @id <= 1
+    session['current_score']=0
+  end
+  # p '-'*800
   p  @question=Deck.where(name:"Game of thrones").first.cards[@id]
   # p '-'*800
     @answer_options=[@question.answer, @question.dummy_answer_1, @question.dummy_answer_2, @question.dummy_answer_3].shuffle!
@@ -19,9 +21,6 @@ post '/submit' do
   @answer=Deck.where(name:"Game of thrones").first.cards[@id].answer
   params[:answer]
 
-if @id >= Deck.where(name:"Game of thrones").first.cards.count
-  redirect '/score'
-end
 
 
   if @answer == params[:answer]
@@ -33,6 +32,10 @@ end
     session['feedback'] = "You fucked up that last question, the answer was: #{@answer}"
   end
 
+if @id >= Deck.where(name:"Game of thrones").first.cards.count
+  p "8"*800
+  redirect '/score'
+end
   # redirect '/'
   redirect "/play/#{@id}"
   # redirect '/play/@id'
