@@ -1,15 +1,28 @@
 .leaderboard {
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     padding: 25px 25px 25px 50px;
     border-radius: 50px;
-    box-shadow: 9px 7px 58px grey;
+    /* box-shadow: 9px 7px 58px grey; */
     /* background-color: white; */
     width: 65%;
-    max-width: 700px;
-    min-width: 250px;
-    position: relat;
+    height: 90%;
 }
 
+.columns {
+  color: blue;
+}
+.replay{
+color: orange;
+}
+.results {
+  float: left;
+  font-size: 1.5em;
+  color: orange;
+}
+
+.table {
+  width: 400px;
+}
 
 #score{
   position: absolute;
@@ -64,6 +77,7 @@ body {
     width: 150px;
     height: 40px;
     font-weight: bold;
+    position: relative;
 }
 
 /*Card class for the game */
