@@ -1,5 +1,7 @@
 <h1> <%=@deck.name%> </h1>
-<h3><%=@feedback%></h3>
+<div id="feedback">
+<h3><%=session['feedback']%></h3>
+</div>
 
 <%=@question.question%>
 <br>
