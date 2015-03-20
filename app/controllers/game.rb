@@ -1,7 +1,16 @@
+get '/' do
+erb :game
+end
+
 get '/play/:id' do
   # session['id']
-  session['current_score']=0
-  @question=Deck.where(name:"deckofthrones").cards[params[:id]]
+  puts @id = params[:id]
+  # session['current_score']=0
+    # @question=Deck.where(name:"Game of thrones").first.cards.first
+    @question=Deck.where(name:"Game of thrones").first.cards[params[:id].to_i]
+    # @question=Deck.where(name:"Game of thrones").first.
+    # cards[params[:id]]
+    @deck=Deck.where(name:"Game of thrones").first
   erb :game
 end
 
