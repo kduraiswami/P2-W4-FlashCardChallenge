@@ -1,5 +1,5 @@
 get '/' do
-erb :index
+  erb :index
 end
 
 post '/register' do
@@ -7,5 +7,5 @@ post '/register' do
   session['user_name']=@username
   new_user = User.new(username: @username)
   new_user.save
-redirect '/play/0'
+  redirect '/play/0'
 end

@@ -2,29 +2,27 @@
 
 <div class="feedback">
 	<h3 id="feedback"><%=session['feedback']%></h3>
-</div> <br>
+</div>
+<br>
+
 <div class="card">
+	<h3 class="question" > Q: <%=@question.question%> </h3>
 
-<h3 class="question" >
-	Q: <%=@question.question%>
-</h3>
-
-	<p>
 	<form action="/submit" method="POST" id="main form">
-
 		<input type="hidden" name="current_id" value="<%=@id.to_i%>">
-		<%@answer_options.each do |current_option|%>
+			<%@answer_options.each do |current_option|%>
+				<input type="radio" name="answer" value ="<%=current_option%>">
+				<%=current_option%>
+				<br><br>
+			<%end%>
 
-		<input type="radio" name="answer" value ="<%=current_option%>">
-		<%=current_option%>
-		</p>
-
-		<%end%>
-
+	<div>
 		<input class="button" type="submit" value="Submit">
-	</form><br>
+	</div>
+	</form>
 
-		<p class="current_score">
+	<p class="current_score">
 		Current Score: <%=session['current_score']%>
-		<p>
+	<p>
+
 </div>
