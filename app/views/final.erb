@@ -1,36 +1,40 @@
 <div class="congrats">
   <h1>Your final score is: <%=session['current_score']%></h1>
-</div><br>
+</div>
 
 <div class = "leaderboard">
   <h1>Leaderboard</h1>
+</div>
 
-<div class="results">
-  <table class="table">
+<div>
+  <table class="results">
     <div class="columns">
-      <tr> <td>Player</td><br><td>Score </td><td></td><td>Your Level</td> </tr>
+      <tr>
+        <td>Player</td><br>
+        <td>Score </td>
+        <td></td>
+        <td>Your Level</td>
+      </tr>
       <tr></tr>
     </div>
-    <%  @leaders.each do |player|  %>
-  <tr> <td><%=player.username%> </td><br><td><%=player.score%> </td><td></td><td><%=player.level%></td> </tr>
+  <%  @leaders.each do |player|  %>
+      <tr>
+        <td><%=player.username%> </td><br>
+        <td><%=player.score%> </td>
+        <td></td>
+        <td><%=player.level%></td>
+      </tr>
     <%end %>
   </table>
+</div>
 
-<br><br>
-
-<div class= "button" class="replay">
+<div class= "replay_button">
   <a href="/play/0">Play again?</a>
 </div>
-<br><br>
-<br><br>
 
-<div class= "button" class="replay">
+<div class= "replay_button">
  <a href="/">New Player?</a>
 </div>
-
-</div>
-
-<br><br>
 
 
 

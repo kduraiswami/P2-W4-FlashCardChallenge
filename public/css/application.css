@@ -1,39 +1,3 @@
-.leaderboard {
-    /* border: 1px solid grey; */
-    padding: 25px 25px 25px 50px;
-    border-radius: 50px;
-    /* box-shadow: 9px 7px 58px grey; */
-    /* background-color: white; */
-    width: 65%;
-    height: 90%;
-}
-
-.columns {
-  color: blue;
-}
-.replay{
-color: orange;
-}
-.results {
-  float: left;
-  font-size: 1.5em;
-  color: orange;
-}
-
-.table {
-  width: 400px;
-}
-
-#score{
-  position: absolute;
-  background-color: white;
-  color: steelblue;
-  border-radius: 30px;
-  left: 20%;
-  top: 20%;
-  padding: 5%;
-}
-
 
 body {
   color: whitesmoke;
@@ -42,8 +6,10 @@ body {
   margin-left: 5%;
 }
 
-# Font styling
- h2 {
+/*Question presentation for the game */
+
+ .answers {
+  padding: 1px 0px;
  }
 
 .current_score {
@@ -55,6 +21,7 @@ body {
   color: orange;
   font-size: 1.5em;
 }
+
 .question {
     color: greenyellow;
 }
@@ -78,16 +45,15 @@ body {
     height: 40px;
     font-weight: bold;
     position: relative;
+    margin: 2% 0% 0% 0%;
 }
 
 /*Card class for the game */
 .card {
     border: 1px solid grey;
-
     padding: 25px 25px 25px 50px;
     border-radius: 50px;
     box-shadow: 9px 7px 58px grey;
-    /* background-color: white; */
     width: 65%;
     max-width: 700px;
     min-width: 250px;
@@ -95,7 +61,56 @@ body {
 }
 
 .feedback {
-	/* border: 2px solid blue; */
 	color: yellow;
 	width: 90%;
+}
+
+/*Score erb page for the game */
+
+.leaderboard {
+    padding: 25px 25px 25px 50px;
+    border-radius: 50px;
+    width: 65%;
+    height: 90%;
+}
+
+.results{
+  margin; 0% 0% 0% 2%;
+}
+
+table {
+  width: 400px;
+  float: left;
+  font-size: 1.5em;
+  color: orange;
+}
+
+.columns {
+  color: blue;
+}
+
+.replay_button{
+  margin: 2%;
+  float: left;
+  font-size: 1.5em;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 1em;
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  position: relative;
+  clear: both;
+}
+
+
+#score{
+  position: absolute;
+  background-color: white;
+  color: steelblue;
+  border-radius: 30px;
+  left: 20%;
+  top: 20%;
+  padding: 5%;
 }
