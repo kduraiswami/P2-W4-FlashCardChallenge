@@ -55,7 +55,7 @@ post '/submit' do
       else
         @got_character="Hot Pie"
       end
-   Game.create(score:session['current_score'].to_i, username:session['user_name'], level:@got_character)
+   Game.create(score:session['current_score'].to_i, username:session['user_name'], level:@got_character, user_id: current_user.id,deck_id:current_deck.id)
   session['rank']=@got_character
     redirect '/score'
   end

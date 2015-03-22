@@ -51,9 +51,7 @@ end
 
 
 get '/display' do
-
  @deck_id=params[:selection].to_i
  session['current_id']=@deck_id
-
   erb :display
 end
