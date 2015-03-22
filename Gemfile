@@ -17,7 +17,7 @@ gem 'rake'
 
 gem 'shotgun'
 gem 'hirb'
-gem 'sqlite3'
+# gem 'sqlite3'
 
 group :test do
   gem 'shoulda-matchers'
