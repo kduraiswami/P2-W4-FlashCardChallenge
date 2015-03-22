@@ -34,7 +34,7 @@ cards1=[
 deckofthrones=Deck.create(name:"Game of thrones")
 # deckofthrones2=Deck.create(name:"Game of thrones")
 # thewalkingdeck=Deck.create(name:"The Walking Dead")
-
+currentdeck=Deck.create(name:"Current Deck")
 
 #create cards
 # cards3.each do |flash|
@@ -50,4 +50,8 @@ deckofthrones=Deck.create(name:"Game of thrones")
 
 cards1.each do |flash|
   deckofthrones.cards << Card.create(flash)
+end
+
+cards1.each do |flash|
+  currentdeck.cards << Card.create(flash)
 end

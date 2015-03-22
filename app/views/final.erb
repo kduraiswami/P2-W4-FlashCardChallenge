@@ -24,7 +24,12 @@
         <td><%=player.level%></td>
       </tr>
     <%end %>
-  </table>
+  </table><br><br>
+
+  <h3>Personal stats for <%=current_user.username%></h3>
+  <%  @user_stats.each do |player|  %>
+  <%=player.score%> - <%=player.level%> - <%=player.created_at.strftime("%l:%M%p - %b %e, %Y")%> <br>
+ <%end %>
 </div>
 
 <div class= "replay_button">
