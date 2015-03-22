@@ -1,4 +1,5 @@
 get '/' do
+  # session['message']=""
   erb :index
 end
 
@@ -11,12 +12,14 @@ post '/register' do
     if t_user.valid?
       redirect '/play/0'
     else
-      "User name already taken"
+      session['message'] = "User name already taken"
       redirect '/'
+      # erb :index
     end
-
   else
+    session['message'] = "passwords don't match"
     redirect '/'
+      # erb :index
   end
   # new_user.save
   redirect '/play/0'

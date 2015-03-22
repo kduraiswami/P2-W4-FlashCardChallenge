@@ -22,7 +22,7 @@ Login
     <input class="button" type="submit" value="Submit">
   </form>
   <br><br>
-  Sign up
+  Sign up<br> <%=session['message']%>
 <form action="/register" method="POST">
     <input class="textbox" type="text" name="username" placeholder="Your name here">
     <input class="textbox" type="text" name="password" placeholder="password">
