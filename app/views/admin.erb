@@ -1,0 +1,17 @@
+<div class="admin">
+
+<form action="/display" method="get">
+
+<%Deck.all.each do |deck|%>
+<input type="radio" value="<%=deck.id%>" name="selection"><%=deck.name%>  -  <a href="/delete/<%=deck.id%>">delete</a>
+<br>
+<%end%>
+<br>
+<input type="submit" value="display deck">
+</form>
+<br><br>
+<a href="/admin/create">Create new deck</a>
+
+<h2>Current Deck: <%=session['current_deck'].name%></h2>
+
+</div>

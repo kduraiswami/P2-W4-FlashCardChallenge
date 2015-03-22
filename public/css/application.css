@@ -114,3 +114,14 @@ table {
   top: 20%;
   padding: 5%;
 }
+
+/*Admin stuff*/
+
+.admin{
+  color: black;
+  background-color: white;
+  position: absolute;
+  left: 30%;
+  top:30%;
+  padding: 3%;
+}
