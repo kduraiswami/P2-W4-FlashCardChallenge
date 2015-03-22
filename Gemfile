@@ -17,6 +17,7 @@ gem 'rake'
 
 gem 'shotgun'
 gem 'hirb'
+gem 'sqlite3'
 
 group :test do
   gem 'shoulda-matchers'
@@ -26,7 +27,7 @@ group :test do
 end
 
 group :test, :development do
-  gem 'sqlite3'
+  # gem 'sqlite3'
   gem 'factory_girl'
   gem 'faker'
 end
