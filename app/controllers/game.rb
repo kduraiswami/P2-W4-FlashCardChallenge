@@ -4,7 +4,7 @@ get '/play/:id' do
     session['current_score']=0
     session['feedback']=""
   end
-  @question=Deck.where(name:"Game of thrones").first.cards[@id]
+  @question=Deck.where(name:"Current Deck").first.cards[@id]
   @answer_options=[@question.answer, @question.dummy_answer_1, @question.dummy_answer_2, @question.dummy_answer_3].shuffle!
   @deck=Deck.where(name:"Game of thrones").first
 

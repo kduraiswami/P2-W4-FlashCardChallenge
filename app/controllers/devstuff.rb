@@ -1,8 +1,11 @@
 get '/admin' do
-
-  erb :admin
+  if current_user == User.find_by_username('ml')
+    erb :admin
+  else
+    "You must be an admin to access this page"
+    redirect '/'
+  end
 end
-
 
 
 get '/admin/create' do
@@ -20,7 +23,7 @@ post '/admin/create_deck' do
   i=1
   10.times do
     # Card.create(question:que[i] ,answer:ans[i])
-    newDeck.cards << Card.create(question:params["question#{i}".to_sym] ,answer:params["answer#{i}".to_sym])
+    newDeck.cards << Card.create(question:params["question#{i}".to_sym] ,answer:params["answer#{i}".to_sym], dummy_answer_1: params["dummyanswer#{i}".to_sym], dummy_answer_2: params["dummyanswer#{i}".to_sym], dummy_answer_3: params["dummyanswer#{i}".to_sym])
     i+=1
   end
 
@@ -36,7 +39,7 @@ post '/admin/confirm' do
   # p '*'*800
 new_cards=[]
   Deck.where(id:params[:current_id]).first.cards.each do |car|
-    new_cards << Card.new(question:car.question, answer:car.answer)
+    new_cards << Card.new(question:car.question, answer:car.answer,dummy_answer_1: car.dummy_answer_1, dummy_answer_2: car.dummy_answer_2, dummy_answer_3: car.dummy_answer_3)
   end
 
   Deck.where(name:"Current Deck").first.update_attributes(cards: new_cards)

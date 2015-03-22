@@ -6,7 +6,7 @@ $(document).ready(function() {
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
 });
 
-var ref = new Firebase("https://sfsealionschat.firebaseio.com/");
+// var ref = new Firebase("https://sfsealionschat.firebaseio.com/");
 var messagesRef = ref.child('messages');
 var usersRef = ref.child('users');
 var currentUser = null;

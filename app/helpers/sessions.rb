@@ -2,7 +2,7 @@ helpers do
 
   def current_user
         # TODO: return the current user if there is a user signed in.
-        User.find_by_email(session['user_name'])
+        User.find_by_username(session['user_name'])
   end
 
   def give_token
