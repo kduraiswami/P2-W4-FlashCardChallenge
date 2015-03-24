@@ -1,3 +1,5 @@
+
+
 <div class="title">
   <h1>The Game of Thrones</h1>
   <h2>Are you worthy?</h2>
@@ -13,8 +15,23 @@
 <h3>Enter the game, if you dare!</h3>
 
 <div class="registration">
-  <form action="/register" method="POST">
+Login
+  <form action="/login" method="get">
     <input class="textbox" type="text" name="username" placeholder="Your name here">
+    <input class="textbox" type="password" name="password" placeholder="password">
     <input class="button" type="submit" value="Submit">
   </form>
-</div>
+  <br><br>
+  Sign up<br> <%=session['message']%>
+<form action="/register" method="POST">
+    <input class="textbox" type="text" name="username" placeholder="Your name here">
+    <input class="textbox" type="text" name="password" placeholder="password">
+    <input class="textbox" type="text" name="confirmpassword" placeholder="confirm password">
+    <input class="button" type="submit" value="Submit">
+  </form>
+
+
+
+      <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>

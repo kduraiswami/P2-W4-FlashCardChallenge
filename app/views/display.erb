@@ -1,0 +1,15 @@
+<div class="admin">
+<form action="/admin/confirm" method="post">
+<%Deck.find_by_id(@deck_id).cards.each do |card|%>
+<br>
+Q: <%=card.question%><br>
+A: <%=card.answer%><br>
+<hr>
+<%end%>
+
+<input type="hidden" name="current_id" value="<%=@deck_id%>">
+<input type="submit" value="confirm">
+</form>
+
+<a href="/edit">edit deck<a>
+</div>

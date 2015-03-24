@@ -1,5 +1,5 @@
 
-body {
+body.main {
   color: whitesmoke;
   background-image: url(/images/GoThrones.jpg);
   background-size: auto;
@@ -113,4 +113,15 @@ table {
   left: 20%;
   top: 20%;
   padding: 5%;
+}
+
+/*Admin stuff*/
+
+.admin{
+  color: black;
+  background-color: white;
+  position: absolute;
+  left: 10%;
+  top:10%;
+  padding: 3%;
 }

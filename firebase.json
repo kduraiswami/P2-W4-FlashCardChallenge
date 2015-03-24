@@ -1,0 +1,9 @@
+{
+  "firebase": "got-trivia",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
