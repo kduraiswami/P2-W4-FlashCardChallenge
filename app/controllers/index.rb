@@ -1,5 +1,6 @@
 get '/' do
   # session['message']=""
+  session['current_deck'] = @Deck.find(1)
   erb :index
 end
 
