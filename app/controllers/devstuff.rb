@@ -1,10 +1,5 @@
 get '/admin' do
-  if current_user == User.find_by_username('ml')
-    erb :admin
-  else
-    "You must be an admin to access this page"
-    redirect '/'
-  end
+ erb :admin
 end
 
 

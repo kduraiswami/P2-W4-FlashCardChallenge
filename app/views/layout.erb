@@ -36,7 +36,7 @@
 </head>
 <header>
 <%if current_user%>
-  <%if current_user==User.find_by_username('ml')%>
+  <%if current_user==User.find_by_username('kailash')%>
     logged in as <%=current_user.username%> <a href="/logout">logout</a> - <a href="/play/0">Play a game</a>-<a href="/admin">Admin Panel</a>
   <%else%>
     logged in as <%=current_user.username%> <a href="/logout">logout</a> -<a href="/play/0">Play a game</a>-

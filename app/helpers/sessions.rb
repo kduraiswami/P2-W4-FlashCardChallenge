@@ -6,7 +6,7 @@ helpers do
   end
 
   def current_deck
-        Deck.find(session['current_id'])
+        Deck.find_by_name(session['current_id'])
   end
 
   def give_token
