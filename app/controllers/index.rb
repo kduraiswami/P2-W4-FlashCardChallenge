@@ -1,6 +1,7 @@
 get '/' do
   # session['message']=""
-  session['current_deck'] = Deck.find_by_name("Game of thrones")
+  session['current_deck'] = Deck.find_by_name("Current Deck")
+session['user_name'] = nil
   erb :index
 end
 

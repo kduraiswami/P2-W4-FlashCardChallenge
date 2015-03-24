@@ -12,7 +12,6 @@ get '/play/:id' do
 end
 
 post '/submit' do
-
   @id=params[:current_id].to_i
   @answer=Deck.where(name:"Current Deck").first.cards[@id].answer
   params[:answer]
@@ -30,9 +29,8 @@ post '/submit' do
     session['feedback'] = "The correct answer was: #{@answer}"
   end
 
-  if @id >= Deck.where(name:"Game of thrones").first.cards.count
- p '-'*80
-      if session['current_score'] == 26
+  if @id >= current_deck.cards.count
+      if session['current_score'] >= 26
         @got_character="George R.R. Martin himself"
       elsif session['current_score']==25
         @got_character="Khaleesi"
@@ -55,8 +53,8 @@ post '/submit' do
       else
         @got_character="Hot Pie"
       end
-   Game.create(score:session['current_score'].to_i, username:session['user_name'], level:@got_character, user_id: current_user.id,deck_id:current_deck.id)
-  session['rank']=@got_character
+    Game.create(score:session['current_score'].to_i, username:session['user_name'], level:@got_character, user_id: current_user.id, deck_id:current_deck.id)
+    session['rank']=@got_character
     redirect '/score'
   end
 
